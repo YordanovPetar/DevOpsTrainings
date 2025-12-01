@@ -1,1 +1,2 @@
 Adding some info in secondFile
+new line
