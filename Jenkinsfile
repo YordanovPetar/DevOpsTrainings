@@ -23,9 +23,9 @@ pipeline {
                 sh '''
                 docker run --rm \
                   -e NETLIFY_AUTH_TOKEN=$NETLIFY_AUTH_TOKEN \
-                  -v $PWD:/deploys \
+                  -v $PWD:/projects \
                   jenkins-netlify-agent \
-                  sh -c "netlify deploy --prod --dir=/deploys --auth=$NETLIFY_AUTH_TOKEN --site=4862e94e-79f5-4d87-b6e2-dfe42874daa0"
+                  sh -c "netlify deploy --prod --dir=/projects --auth=$NETLIFY_AUTH_TOKEN --site=4862e94e-79f5-4d87-b6e2-dfe42874daa0"
                 '''
             }
         }
